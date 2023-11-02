@@ -1,0 +1,120 @@
+Group 1:
+Summary: CPU and Memory usage fluctuated throughout the day. CPU usage peaked at hour 18 (0.03595) and memory usage followed a similar pattern, peaking at the same hour (0.00800). The lowest CPU and memory usage were observed at hour 9 (0.00175 and 0.00063 respectively). Generally, usage increased during the day and decreased at night, indicating a pattern tied to user activity. Historically, usage patterns have been consistent with the current findings.
+==================================================
+Group 2:
+<Current>: During hours 24 to 47, the CPU and memory usage in Tier 1_free generally fluctuated. CPU usage peaked at hour 26 (0.0212) and dipped lowest at hour 37 (0.0018). Memory usage followed a similar pattern, peaking at hour 26 (0.0065) and hitting its lowest at hour 31 (0.0008).
+
+<History>: The historical data from hour 0 shows a consistent pattern of fluctuating CPU and memory usage, with similar peaks and troughs observed in the current data.
+==================================================
+Group 3:
+Summary: The infrastructure logs show a fluctuating pattern of CPU and Memory usage across hours 48 to 71. The highest CPU usage was recorded at hour 61, peaking at 0.065629378250495, and the highest memory usage at the same hour, reaching 0.0154346221600054. The lowest CPU usage was at hour 55 with 0.0027400600730685, and the lowest memory usage at the same hour, hitting 0.0008282128746396. The data suggests periods of high and low usage, potentially indicating peak and off-peak times.
+==================================================
+Group 4:
+<Current> From hour 72 to 95, the CPU and memory usage in the Tier 1_free varied. The highest CPU usage was recorded at hour 95 with 0.0248, while the highest memory usage was also at hour 95 with 0.0065. 
+
+<History> The usage of CPU and memory generally fluctuated in this period. Notably, there were significant increases in CPU and memory usage at hours 90, 91, 92, and 94, with peak values at hour 95.
+==================================================
+Group 5:
+<Current>: From hours 96 to 119, CPU usage peaked at 0.0593 during hour 109 and memory usage peaked at 0.0165 during the same hour. Both metrics showed an overall increasing trend. 
+
+<History>: Comparing with historical data, the recent CPU and memory usage have significantly increased, indicating a higher demand on the infrastructure.
+==================================================
+Group 6:
+Summary: The CPU and Memory usage for Tier 1_free fluctuated over the span of 24 hours. The highest CPU usage (0.0408368722346113) was recorded at Hour 132, which also corresponded to the highest memory usage (0.0109146932408501). The lowest CPU and Memory usage were recorded at Hour 127. Overall, there seems to be a positive correlation between CPU and Memory usage. The data shows a general increase in usage towards the middle of the time span, followed by a decrease towards the end.
+==================================================
+Group 7:
+<Current> From hour 144 to 167, CPU usage fluctuated, with a significant spike at hour 165 and 166. Memory usage generally increased over time, with a noticeable peak at hour 166. <History> Prior to this, CPU and memory usage remained relatively steady with minor fluctuations, indicating stable system performance.
+==================================================
+Group 8:
+Summary: The CPU and Memory usage for the Tier: 1_free generally remained low from hour 168 to 180, with a few spikes. However, there was a significant increase from hour 181 onwards, peaking at hour 184 with 0.0594372926109568 CPU usage and 0.0148407622418879 Memory usage. This trend continued until hour 191, although the usage slightly decreased. This indicates a higher demand on the system resources during this period.
+==================================================
+Group 9:
+Summary: The CPU and Memory usage for the Tier 1_free fluctuated over the given time span. The CPU usage peaked at 0.0676 during the 203rd hour, while the lowest usage was 0.0036 during the 201st hour. Memory usage also peaked during the 203rd hour at 0.0139, with the lowest usage at the 200th hour at 0.0015. The data shows a general trend of increasing usage, followed by a decrease, suggesting a cyclical pattern.
+==================================================
+Group 10:
+<Current>: From hour 216 to 239, CPU and memory usage in Tier 1_free fluctuated. CPU usage peaked at 0.1500524000365425 in hour 230, while memory usage peaked at 0.0363301371475937 in the same hour. 
+
+<History>: Compared to historical data, recent CPU and memory usages show a significant increase, indicating a growing demand on the infrastructure.
+==================================================
+Group 11:
+<current> From hour 240 to 263, CPU usage fluctuated between 0.0247 and 0.1195, with a peak at hour 251. Memory usage ranged from 0.0081 to 0.0306, also peaking at hour 253. <history> Comparatively, the CPU and memory usage were relatively stable with occasional spikes, indicating periods of high demand.
+==================================================
+Group 12:
+<current> CPU and memory usage in the free tier 1 infrastructure fluctuated between hours 264 to 287. CPU usage peaked at 0.1038823282602853 during hour 279, while memory usage reached its highest point of 0.0268749379796645 at the same time. 
+
+<history> Comparatively, CPU and memory usage had a lower average in the historical data, indicating a recent increase in resource consumption.
+==================================================
+Group 13:
+<current> Between hours 288 and 311, CPU usage peaked at 0.1271 during hour 306, and memory usage peaked at 0.0316 during the same hour. The lowest CPU usage was 0.0054 at hour 295, and the lowest memory usage was 0.0014 at the same hour. 
+
+<history> Overall, CPU and memory usage showed a fluctuating pattern with a general increase over time. These metrics reached their highest values during the latter part of the observed period, suggesting a growing demand on the infrastructure.
+==================================================
+Group 14:
+Summary: CPU and Memory usage fluctuated across the time span. CPU usage peaked at hour 324 with 0.0909498580706437 and dipped lowest at hour 318 with 0.0067978690714426. Memory usage also peaked at hour 324 with 0.0226553889900764 and hit the lowest at hour 318 with 0.0020207159007831. The data shows a pattern of increasing CPU and Memory usage from hour 312 to 324, followed by a gradual decrease.
+==================================================
+Group 15:
+<Current> During hours 336-359, CPU usage peaked at 0.0952 (Hour 354) and had a low of 0.0083 (Hour 342). Memory usage also peaked at 0.0227 (Hour 354) and had a low of 0.0023 (Hour 342). <History> The data shows fluctuations in both CPU and memory usage, with a general increase over time. CPU usage showed a significant spike during Hour 353-354.
+==================================================
+Group 16:
+Summary: The CPU and Memory usage in the tier 1_free infrastructure over the last 24 hours (Hour 360 to 383) showed fluctuations. The highest CPU usage was recorded at Hour 373 with 0.1052, while the lowest was at Hour 360 with 0.0053. Memory usage peaked at Hour 373 with 0.0236 and had its lowest at Hour 360 with 0.0013. The usage generally increased after Hour 369, indicating a higher demand during this period. In historical context, the data shows an upward trend in usage.
+==================================================
+Group 17:
+Summary: CPU and memory usage showed a fluctuating pattern from hour 384 to 407. CPU usage peaked at 0.1031 during hour 394, followed by a decline and then a rise again. Memory usage followed a similar pattern, reaching a high of 0.0242 at hour 394. The lowest CPU usage was at hour 391 with 0.0055 and the lowest memory usage was also at the same hour with 0.0016. The data suggests periods of high and low resource utilization.
+==================================================
+Group 18:
+<current> From hour 408 to 431, CPU usage fluctuated, peaking at 0.1094 in hour 417. Memory usage also varied, with a high of 0.0307 in hour 421. <history> The data suggests a pattern of varying usage rates, with certain hours experiencing higher resource usage.
+==================================================
+Group 19:
+Summary: The data shows a steady increase in both CPU and memory usage from hour 432 to 446, with peak usage at hour 446 (CPU: 0.0852439511277793, Memory: 0.0249177043313722). Post hour 446, there is a consistent decrease in usage till hour 455. The highest surge was observed between hours 438 and 444. The <current> period (432-455) shows higher usage compared to <history>.
+==================================================
+Group 20:
+<current> From hour 456 to 479, CPU and memory usage showed significant fluctuations in the 1_free tier. Usage peaked at hour 465 with CPU usage reaching 0.1 and memory usage at 0.027. Generally, usage was higher in the second half of this period. 
+
+<history> Comparing to historical data, the recent CPU and memory usage showed an unusual increase, suggesting potential system stress or increased workload.
+==================================================
+Group 21:
+<current> From hour 480 to 503, the CPU usage and memory usage fluctuated significantly in the Tier 1_free. The highest CPU usage (0.1709760389061275) occurred at hour 490 and the highest memory usage (0.0435326225208395) also occurred at the same hour. 
+
+<history> Compared to previous patterns, there is a noticeable increase in both CPU and memory usage starting from hour 489, peaking at hour 490, and then gradually declining.
+==================================================
+Group 22:
+<current> From hour 504 to 527, there was an increasing trend in both CPU and memory usage on the Tier 1_free infrastructure. The highest CPU usage was recorded at hour 522 with 0.1197, while the peak memory usage was also at hour 522 with 0.0297793881790933. 
+
+<history> Initially, the CPU and memory usage were relatively low, with a slight dip around hour 507. However, from hour 514 onwards, there was a significant increase, indicating high demand or possible efficiency issues.
+==================================================
+Group 23:
+Summary: The CPU and Memory usage in the Tier 1_free infrastructure fluctuated over the hours 528 to 551. The lowest CPU usage was recorded at hour 535 (0.0072) and the highest at hour 546 (0.1438). Similarly, the lowest Memory usage was observed at hour 535 (0.0022) and the highest at hour 550 (0.0519). The data indicates an overall increasing trend in CPU and Memory usage.
+==================================================
+Group 24:
+<Current> In the last 24 hours (from hour 552 to 575), there were fluctuations in CPU and memory usage in the 1_free tier. CPU usage peaked at 0.162 during hour 563, while memory usage reached its highest at 0.047 during hour 554. The lowest CPU usage was 0.009 during hour 571 and the lowest memory usage was 0.002 also during hour 571.
+
+<History> Comparing to previous data, the CPU and memory usage showed a similar pattern of peaks and troughs, indicating a consistent usage pattern in the 1_free tier. The variations in usage may be due to different workloads at different hours.
+==================================================
+Group 25:
+Summary: The infrastructure log data shows a fluctuating pattern in CPU and Memory usage for the Tier 1_free. The CPU usage started low at 0.008 in hour 576, dipped to 0.003 in hours 579 and 580, then saw a significant increase peaking at 0.097 in hour 594. Memory usage followed a similar trend, with a peak at 0.029 in hour 594. The data suggests a surge in resource usage during hours 583 to 594.
+==================================================
+Group 26:
+Summary: CPU and memory usage in the 1_free tier have shown fluctuations over the past 23 hours. CPU usage peaked at 0.1076 during the 617th hour, and memory usage reached its highest at 0.0283 in the same hour. The lowest CPU usage was recorded at 0.0096 during the 609th hour, and memory usage was lowest at 0.0024 in the same hour. The data suggests a correlation between CPU and memory usage.
+==================================================
+Group 27:
+Summary: Over the last 24 hours, CPU usage and memory usage fluctuated for our Tier 1_free infrastructure. CPU usage peaked at hour 642 with 0.127 usage, while the lowest was at hour 631 with 0.008 usage. Memory usage also peaked at hour 642 with 0.035 usage and hit the lowest at hour 631 with 0.0025 usage. This indicates a correlation between CPU and memory usage.
+==================================================
+Group 28:
+<current> In the recent hours 648 to 671, CPU usage in the 1_free tier fluctuated, with the highest at 0.0783887259368724 in hour 665 and the lowest at 0.0087262314501575 in hour 656. Memory usage also varied, peaking at 0.018838659759395 in hour 665. 
+
+<history> The historical data shows a general pattern of CPU and memory usage fluctuating over time in the 1_free tier.
+==================================================
+Group 29:
+<Current> From hour 672 to 695, the Tier 1_free infrastructure showed fluctuating CPU and memory usage. The highest CPU usage, 0.0956, occurred at hour 694, while the highest memory usage, 0.0293, was recorded at hour 695. The lowest CPU and memory usage were observed at hour 680.
+
+<History> Historically, CPU and memory usage have shown similar patterns of fluctuation. The usage tends to peak and then decrease significantly, suggesting periods of high and low demand or activity.
+==================================================
+Group 30:
+<current> In the recent hours 696-719, the CPU usage fluctuated between 0.0089 and 0.1018, with the highest at hour 697. Memory usage ranged from 0.0024 to 0.0271, peaking at hour 697 as well. <history> The historical data shows that CPU and memory usage vary over time, with some noticeable spikes.
+==================================================
+Group 31:
+<current> From hour 720 to 743, CPU usage peaked at 0.0971 during hour 738, while memory usage peaked at 0.0253 during the same hour. Both metrics showed a general increase over time. <history> The data represents the usage patterns of a free tier 1 infrastructure, with fluctuations in CPU and memory usage. The highest recorded usage occurred in the recent hours, suggesting increased demand or activity.
+==================================================
+Group 32:
+Summary: During hour 744, Tier 1_free showed minimal usage with CPU at approximately 0.0029 and memory usage around 0.0011. Compared to historical data, this represents a consistent pattern of low usage, suggesting efficient resource utilization. There were no significant events or anomalies during this period.
+==================================================

@@ -1,0 +1,42 @@
+Group 1:
+Compression Ratio: 0.17777777777777778
+Keyword Coverage: 0.8
+Coherence: 0.21378278138581663
+Consistency: 1.0
+--------------------------------------------------
+Group 2:
+Compression Ratio: 0.19722222222222222
+Keyword Coverage: 0.8
+Coherence: 0.24288863688707352
+Consistency: 1.0
+--------------------------------------------------
+Group 3:
+Compression Ratio: 0.21944444444444444
+Keyword Coverage: 1.0
+Coherence: 0.32127072662115097
+Consistency: 1.0
+--------------------------------------------------
+Group 4:
+Compression Ratio: 0.21666666666666667
+Keyword Coverage: 0.8
+Coherence: 0.23380118076290404
+Consistency: 1.0
+--------------------------------------------------
+Group 5:
+Compression Ratio: 0.2222222222222222
+Keyword Coverage: 1.0
+Coherence: 0.21764526143670082
+Consistency: 1.0
+--------------------------------------------------
+Group 6:
+Compression Ratio: 0.19166666666666668
+Keyword Coverage: 0.8
+Coherence: 0.19449343656500181
+Consistency: 1.0
+--------------------------------------------------
+Group 7:
+Compression Ratio: 0.18055555555555555
+Keyword Coverage: 1.0
+Coherence: 0.35197418089956045
+Consistency: 1.0
+--------------------------------------------------
