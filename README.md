@@ -30,10 +30,7 @@ GPTOps comprises five key components:
 - Analyze results using provided visualization tools.
 
 ## Contributing
-Contributions are welcome. Please read `CONTRIBUTING.md` for guidelines.
-
-## License
-This project is licensed under the [LICENSE_NAME]. See `LICENSE` for more details.
+Contributions are welcome.
 
 ## Contact
-For support or queries, contact [Contact Information].
+For support or queries, contact jiawei2012220@gmail.com.
