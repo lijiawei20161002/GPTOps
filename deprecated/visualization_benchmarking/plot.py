@@ -109,32 +109,39 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Data
-models = ['GPTOps', 'CNN']
-datasets = ['Philly', 'Google Cluster']
-accuracy = np.array([[95, 95], [99, 55]])
+models = ['GPTOps', 'Polluted Raw Data', 'Vague Summary', 'Wrong Prediction']
+datasets = ['Task 1', 'Task 2', 'Task 3', 'Task 4']
+accuracy = np.array([[0.91, 0.85, 0.88, 0.73], [0.92, 0.88, 0.89, 0.69], [0.94, 0.82, 0.87, 0.72], [0.93, 0.8, 0.9, 0.7]])
+accuracy = accuracy.transpose()
 
 # Plotting
-fig, ax = plt.subplots(figsize=(5, 5))
+fig, ax = plt.subplots(figsize=(15, 8))
 
-barWidth = 0.2
+barWidth = 0.15  # Adjust bar width to fit all bars
 r1 = np.arange(len(accuracy[0]))
 r2 = [x + barWidth for x in r1]
+r3 = [x + 2*barWidth for x in r1]
+r4 = [x + 3*barWidth for x in r1]
 
-# Grouping Philly together
-bars1 = plt.bar(r1, accuracy[0], width=barWidth, edgecolor='grey', label='GPTOps', color='lightgreen')
-bars2 = plt.bar(r2, accuracy[1], width=barWidth, edgecolor='grey', label='CNN', color='skyblue', hatch='/')
+# Plotting each group
+bars1 = plt.bar(r1, accuracy[0], width=barWidth, edgecolor='grey', label=models[0], color='lightgreen')
+bars2 = plt.bar(r2, accuracy[1], width=barWidth, edgecolor='grey', label=models[1], color='skyblue', hatch='/')
+bars3 = plt.bar(r3, accuracy[2], width=barWidth, edgecolor='grey', label=models[2], color='lightpink', hatch='\\')
+bars4 = plt.bar(r4, accuracy[3], width=barWidth, edgecolor='grey', label=models[3], color='lightyellow', hatch='-')
 
-plt.xlabel('Datasets', fontweight='bold')
-plt.xticks([r + barWidth/2 for r in range(len(accuracy[0]))], datasets)
+# Setting the x-axis labels and title
+plt.xlabel('Tasks', fontweight='bold', fontsize=14)
+plt.xticks([r + 1.5*barWidth for r in range(len(accuracy[0]))], datasets, fontsize=14)
+plt.title('Performance Scores on 4 Tasks with Five Shot Learning', fontsize=16)
+plt.ylabel('Score', fontweight='bold', fontsize=14)
 
+# Adjusting the y-axis limit
+plt.ylim(0, 1)
+
+# Adding the grid and legend
 plt.grid(axis='y')
-plt.title('Prediction Accuracy on Two Datasets')
-plt.ylabel('Accuracy (%)', fontweight='bold')
-plt.ylim(0, 100)
-
 plt.legend()
 
-plt.savefig('test.png')
-
-
-
+# Saving the plot
+plt.savefig('accuracy_comparison.png')
+plt.show()
