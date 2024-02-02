@@ -28,4 +28,4 @@ class PredictionAgent:
         prediction = self.chat(self.chat_prompt.format_prompt(
             summarized_text=summary, start_time=str(start), end_time=str(end), prediction_period=prediction_period, token_limit=token_limit, latest_period=str(latest_period), examples=examples
         ).to_messages())
-        return prediction.context
+        return prediction.content

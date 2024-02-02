@@ -22,4 +22,4 @@ class SummaryAgent:
         summary = self.chat(self.chat_prompt.format_prompt(
             log=rawdata, start_time=str(start), end_time=str(end), token_limit=token_limit, latest_period=str(latest_period)
         ).to_messages())
-        return summary.context
+        return summary.content
