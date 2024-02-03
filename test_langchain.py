@@ -7,7 +7,7 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 import pandas as pd
 
-chat = ChatOpenAI(temperature=0, openai_api_key="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", openai_organization="org-8yxc3dK5pYpaart4dR32FOda")
+chat = ChatOpenAI(temperature=0, openai_api_key="", openai_organization="")
 template = "Given the recent data from our infrastructure logs: {log},\
               from {start_time} to {end_time},\
               provide a summary highlighting key\
