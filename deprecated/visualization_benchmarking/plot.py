@@ -109,10 +109,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Data
-models = ['GPTOps', 'Polluted Raw Data', 'Vague Summary', 'Wrong Prediction']
+# models = ['GPTOps', 'Polluted Raw Data', 'Vague Summary', 'Wrong Prediction']
+# models = ['zero shot', 'one shot', 'two shot', 'three shot', 'four shot']
+models = ['CR', 'KC', 'Coherence', 'Consistency']
+# models = ['GPTOps', 'LSTM+GPTOps', 'RL+GPTOps', 'LSTM+RL']
 datasets = ['Task 1', 'Task 2', 'Task 3', 'Task 4']
-accuracy = np.array([[0.91, 0.85, 0.88, 0.73], [0.92, 0.88, 0.89, 0.69], [0.94, 0.82, 0.87, 0.72], [0.93, 0.8, 0.9, 0.7]])
-accuracy = accuracy.transpose()
+accuracy = np.array([[0.2, 0.7, 0.6, 0.7], [0.8, 0.7, 0.7, 0.7], [0.45, 0.50, 0.60, 0.40], [1.0, 1.0, 1.0, 1.0]])
+# zeroshot = np.array([[0.75, 0.74, 0.80, 0.75], [0.98, 0.56, 0.50, 0.45], [0.99, 0.40, 0.43, 0.42], [0.93, 0.33, 0.28, 0.19]])
+# fewshot = np.array([[0.77, 0.72, 0.80, 0.75], [0.78, 0.75, 0.83, 0.78], [0.80, 0.84, 0.86, 0.80], [0.90, 0.88, 0.89, 0.88], [0.90, 0.93, 0.92, 0.93]])
+# ablation = np.array([[0.91, 0.85, 0.88, 0.73], [0.92, 0.88, 0.89, 0.69], [0.94, 0.82, 0.87, 0.72], [0.93, 0.8, 0.9, 0.7]])
+# accuracy = accuracy.transpose()
 
 # Plotting
 fig, ax = plt.subplots(figsize=(15, 8))
@@ -122,25 +128,27 @@ r1 = np.arange(len(accuracy[0]))
 r2 = [x + barWidth for x in r1]
 r3 = [x + 2*barWidth for x in r1]
 r4 = [x + 3*barWidth for x in r1]
+#r5 = [x + 4*barWidth for x in r1]
 
 # Plotting each group
 bars1 = plt.bar(r1, accuracy[0], width=barWidth, edgecolor='grey', label=models[0], color='lightgreen')
-bars2 = plt.bar(r2, accuracy[1], width=barWidth, edgecolor='grey', label=models[1], color='skyblue', hatch='/')
+bars2 = plt.bar(r2, accuracy[1], width=barWidth, edgecolor='grey', label=models[1], color='skyblue', hatch='//')
 bars3 = plt.bar(r3, accuracy[2], width=barWidth, edgecolor='grey', label=models[2], color='lightpink', hatch='\\')
 bars4 = plt.bar(r4, accuracy[3], width=barWidth, edgecolor='grey', label=models[3], color='lightyellow', hatch='-')
+#bars5 = plt.bar(r5, accuracy[4], width=barWidth, edgecolor='grey', label=models[4], color='wheat', hatch='*')
 
 # Setting the x-axis labels and title
-plt.xlabel('Tasks', fontweight='bold', fontsize=14)
-plt.xticks([r + 1.5*barWidth for r in range(len(accuracy[0]))], datasets, fontsize=14)
-plt.title('Performance Scores on 4 Tasks with Five Shot Learning', fontsize=16)
-plt.ylabel('Score', fontweight='bold', fontsize=14)
+plt.xlabel('Tasks', fontweight='bold', fontsize=32)
+plt.xticks([r + 1.5*barWidth for r in range(len(accuracy[0]))], datasets, fontsize=24)
+plt.title('Summary Performance on 4 Tasks', fontsize=26)
+plt.ylabel('Score', fontweight='bold', fontsize=32)
 
 # Adjusting the y-axis limit
 plt.ylim(0, 1)
 
 # Adding the grid and legend
 plt.grid(axis='y')
-plt.legend()
+plt.legend(fontsize=22, loc="lower center")
 
 # Saving the plot
 plt.savefig('accuracy_comparison.png')
