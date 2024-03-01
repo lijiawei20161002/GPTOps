@@ -7,6 +7,7 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 from summary_agent import SummaryAgent
 from prediction_agent import PredictionAgent
+from decision_agent import DecisionAgent
 import pandas as pd
 
 your_api_key = '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'
@@ -30,6 +31,7 @@ for i in range(0, len(fulldata), latest_period):
      This trend indicates potential cost savings for cloud infrastructure users in the market.\
      <confidence>: 0.95\
     '
-    #prediction_agent = PredictionAgent(openai_api_key=your_api_key, openai_organization=your_org)
-    #prediction_agent.run(summary=summary, start=start, end=end, prediction_period=latest_period, token_limit=token_limit, latest_period=latest_period, examples)
-
+    prediction_agent = PredictionAgent(openai_api_key=your_api_key, openai_organization=your_org)
+    prediction = prediction_agent.run(summary=summary, start=start, end=end, prediction_period=latest_period, token_limit=token_limit, latest_period=latest_period, examples=example)
+    print(prediction)
+    
