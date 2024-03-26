@@ -34,4 +34,7 @@ for i in range(0, len(fulldata), latest_period):
     prediction_agent = PredictionAgent(openai_api_key=your_api_key, openai_organization=your_org)
     prediction = prediction_agent.run(summary=summary, start=start, end=end, prediction_period=latest_period, token_limit=token_limit, latest_period=latest_period, examples=example)
     print(prediction)
+    intention = "Observe dynamic VM spot price. Procure VMs with low costs."
+    decision_agent = DecisionAgent(intention=intention, openai_api_key=your_api_key, openai_organization=your_org)
+    decision = decision_agent.run()
     

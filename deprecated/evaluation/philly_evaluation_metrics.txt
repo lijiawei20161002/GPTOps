@@ -1,5 +1,0 @@
-Without Feedback:
-Average Similarity Score: 0.7113078633944193
-
-With Feedback:
-Average Similarity Score: 0.7915387550989786
