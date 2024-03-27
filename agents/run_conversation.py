@@ -10,8 +10,8 @@ from prediction_agent import PredictionAgent
 from decision_agent import DecisionAgent
 import pandas as pd
 
-your_api_key = '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'
-your_org = 'org-8yxc3dK5pYpaart4dR32FOda'
+your_api_key = ''
+your_org = ''
 token_limit = 100
 latest_period = 10
 fulldata = pd.read_csv('test_data.txt')
