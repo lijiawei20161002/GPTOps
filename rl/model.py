@@ -1,29 +1,28 @@
 import numpy as np
 
 class DynamicVMProcurementQAgent:
-    def __init__(self, n_states, n_actions, alpha=0.1, gamma=0.99, epsilon=0.1):
+    def __init__(self, n_states, alpha=0.1, gamma=0.99, epsilon=0.1):
         """
-        Initialize the Q-learning agent.
+        Initialize the Q-learning agent for dynamic VM procurement.
         
-        :param n_states: Number of states (discretized if necessary)
-        :param n_actions: Number of actions (2 in this case: 0 for not procuring, 1 for procuring)
-        :param alpha: Learning rate
-        :param gamma: Discount factor
-        :param epsilon: Exploration rate
+        :param n_states: Number of states, representing different future price predictions for each VM type.
+        :param alpha: Learning rate.
+        :param gamma: Discount factor.
+        :param epsilon: Exploration rate for choosing actions.
         """
         self.n_states = n_states
-        self.n_actions = n_actions
+        self.n_actions = 6  # Actions 0 to 5, where 0 means not procuring, and 1-5 correspond to procuring VM types
         self.alpha = alpha
         self.gamma = gamma
         self.epsilon = epsilon
-        self.q_table = np.zeros((n_states, n_actions))
+        self.q_table = np.zeros((n_states, self.n_actions))
 
     def choose_action(self, state):
         """
         Choose an action based on epsilon-greedy policy.
         
-        :param state: The current state
-        :return: Action (0 or 1)
+        :param state: The current state.
+        :return: Action (0 to 5).
         """
         if np.random.rand() < self.epsilon:
             return np.random.choice(self.n_actions)  # Explore
@@ -34,10 +33,10 @@ class DynamicVMProcurementQAgent:
         """
         Update the Q-value table using the Q-learning update rule.
         
-        :param state: The current state
-        :param action: The action taken
-        :param reward: The reward received
-        :param next_state: The next state
+        :param state: The current state.
+        :param action: The action taken.
+        :param reward: The reward received.
+        :param next_state: The next state.
         """
         best_next_action = np.argmax(self.q_table[next_state])
         td_target = reward + self.gamma * self.q_table[next_state][best_next_action]
@@ -48,11 +47,11 @@ class DynamicVMProcurementQAgent:
         """
         Train the Q-learning model.
         
-        :param episodes: Number of episodes for training
-        :param get_next_state_reward: Function to get the next state and reward given a state and action
+        :param episodes: Number of episodes for training.
+        :param get_next_state_reward: Function to simulate the environment, providing the next state and reward given a state and action.
         """
         for episode in range(episodes):
-            state = np.random.randint(0, self.n_states)  # Random initial state
+            state = np.random.randint(0, self.n_states)  # Initial state could also be determined by another method
             done = False
             while not done:
                 action = self.choose_action(state)
