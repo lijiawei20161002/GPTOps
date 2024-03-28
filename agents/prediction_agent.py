@@ -16,7 +16,8 @@ class PredictionAgent:
         {examples}\
         Output with label < prediction >. It should start with a brief overview stating the general trend expected in the next {prediction_period}, following by any relevant statistical \
         or probabilistic data that supports the prediction, and a conclusion summarizing the potential impact of these trends on the overall infrastructure status, in no more than {token_limit}.\
-        Output the confidence of your prediction ranging from 0 to 1, with a label < confidence >."
+        Output the confidence of your prediction ranging from 0 to 1, with a label < confidence >.\
+        Use blank space instead of comma after label <>"
         self.chat_prompt = ChatPromptTemplate.from_messages([
             SystemMessage(
                 content="Your task is to analyze the summarized data received from the Summary Agent and forecast future trends and patterns of the various metrics. Leverage the predictive capabilities of GPT models to generate insights integral to informed decision-making."

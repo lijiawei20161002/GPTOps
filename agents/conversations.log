@@ -1,0 +1,90 @@
+2024-03-28 16:41:31,006 - INFO - 
+
+Summary for data from 0 to 10:
+<current> The spot price has been fluctuating around 0.39-0.40 range in the latest 10 readings.
+<history> The spot price started at 0.4019 and gradually decreased to 0.3917 over the observed period. There is a slight downward trend in the data.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is likely to continue on a downward trend in the next 10 days, with the spot price fluctuating between 0.389 and 0.398. This trend suggests a potential for cost savings for cloud infrastructure users in the market. The gradual decrease in spot price indicates a possible adjustment in market dynamics or supply-demand balance.</prediction>
+<confidence>: 0.92 </confidence>
+--------------------------------------------------
+
+2024-03-28 16:41:39,818 - INFO - 
+
+Summary for data from 10 to 20:
+<current> The spot price for instances has been fluctuating around 0.38, with a slight decrease to 0.3683.
+<history> The spot price has shown variability, peaking at 0.3906 and gradually declining to the current value.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is expected to continue showing a decreasing trend in the next 10 days, with the spot price fluctuating between 0.3906 and 0.3683. This trend suggests a potential cost-saving opportunity for cloud infrastructure users in the market. The historical data indicates a pattern of variability in spot prices, with occasional peaks followed by gradual declines, aligning with the current decrease in spot price. Considering the recent fluctuations and the overall trend, there is a high likelihood of the spot price continuing to decrease in the near future. </prediction>
+<confidence>: 0.92 </confidence>
+--------------------------------------------------
+
+2024-03-28 16:41:44,881 - INFO - 
+
+Summary for data from 20 to 30:
+<current> The spot price has been fluctuating around 0.38, showing slight variations.
+<history> The spot price has gradually increased from 0.3744 to 0.3862 over the observed period.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is likely to continue its current trend of slight fluctuations around 0.38 in the next 10 days. This prediction is based on the historical data showing a gradual increase in the spot price from 0.3744 to 0.3862 over the observed period. The recent data in
+<confidence>: 0.85
+
+These trends suggest that the infrastructure costs are likely to remain relatively stable, providing a predictable environment for cloud infrastructure users. This stability can help businesses plan their budget effectively and make informed decisions regarding their infrastructure usage.</prediction>
+--------------------------------------------------
+
+2024-03-28 16:41:51,178 - INFO - 
+
+Summary for data from 30 to 40:
+<current> The spot price for instances ranges from 0.3859 to 0.3886, showing stability.
+<history> The spot price has been consistent between 0.3859 and 0.3889 over time, indicating a steady pricing trend in the system.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is expected to show a stable trend in the next 10 days, with minor fluctuations within the range of 0.3859 to 0.3886. This prediction is based on the historical data showing consistent spot prices within this range and the current stability observed. The spot price has remained relatively steady over time, indicating a consistent pricing trend in the system. Therefore, it is likely that the infrastructure status will continue to exhibit stability in the near future.
+<confidence>: 0.90
+--------------------------------------------------
+
+2024-03-28 16:41:57,919 - INFO - 
+
+Summary for data from 40 to 50:
+<current> The spot price for instances has been fluctuating between 0.3767 and 0.3896 over the last 10 data points, showing a slight downward trend.
+<history> The spot price has ranged from 0.3767 to 0.3896 over time, with minor variations but no significant spikes or drops.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is expected to continue its slight downward trend in the next 10 days, with the spot price fluctuating between 0.3767 and 0.3896. This forecast is based on the historical data showing minor variations but no significant spikes or drops in the spot price. The recent trend of decreasing spot prices also supports this prediction. Overall, there is a high likelihood that the spot price will remain within the current range, indicating stability in the cost of cloud infrastructure services. This trend suggests potential cost savings for users in the market.</prediction>
+<confidence>: 0.90</confidence>
+--------------------------------------------------
+
+2024-03-28 16:42:03,465 - INFO - 
+
+Summary for data from 50 to 60:
+<current> The spot price for instances ranges from 0.3757 to 0.3818, showing slight fluctuations.
+<history> Over time, the spot price has been relatively stable, hovering around 0.378 with occasional minor variations.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The spot price for instances is expected to show a decreasing trend in the next 10 days, fluctuating between 0.3906 and 0.3683. This trend suggests potential cost savings for cloud infrastructure users in the market. The forecast is based on the historical stability of the spot price around 0.378 with minor fluctuations, as well as recent data indicating a slight decrease in the spot price. The predicted range takes into account the current fluctuations and historical patterns, aligning with the overall trend of stability with occasional variations. Therefore, it is likely that the spot price will continue to decrease slightly in the near future. </prediction>
+<confidence>: 0.95 </confidence>
+--------------------------------------------------
+
+2024-03-28 16:42:09,160 - INFO - 
+
+Summary for data from 60 to 70:
+<current> The spot price has been fluctuating between 0.3746 and 0.3809, with a recent increase to 0.3809 at timestamp 69.
+<history> The spot price has shown a gradual upward trend from 0.3746 to 0.3809 over the observed period.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is likely to continue its upward trend in the next 10 days, with the spot price fluctuating between 0.3809 and potentially reaching higher levels. This forecast is supported by the recent increase in spot price to 0.3809 at timestamp 69, indicating a positive momentum. Additionally, the historical data shows a gradual upward trend from 0.3746 to 0.3809 over the observed period, further supporting the prediction of a continued increase. Considering the overall trajectory, it is probable that the infrastructure status will experience further growth in the near future.</prediction>
+<confidence>: 0.85</confidence>
+--------------------------------------------------
+
+2024-03-28 16:42:17,928 - INFO - 
+
+Summary for data from 70 to 80:
+<current> The spot price has been fluctuating around 0.37 to 0.38 range, with a slight increase in the latest data points.
+<history> The spot price has shown stability with minor variations over time, indicating a consistent pricing trend.
+--------------------------------------------------
+Prediction for the next 10 days:
+<prediction>: The infrastructure status is expected to show a decreasing trend in the next 10 days, with the spot price fluctuating between 0.3906 and 0.3683. This trend suggests potential cost savings for cloud infrastructure users in the market. The forecast is based on the recent fluctuations in spot prices, indicating a downward trajectory. Additionally, historical data showing stability with minor variations supports this prediction of a decreasing trend. The slight decrease in the spot price in the latest data points further reinforces this forecast. Overall, the expected trend points towards a more cost-effective environment for cloud infrastructure users. </prediction>
+<confidence>: 0.95 </confidence>
+--------------------------------------------------
+

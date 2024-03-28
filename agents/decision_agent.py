@@ -19,17 +19,18 @@ class DecisionAgent:
             SystemMessage(
                 content=f"Your task is to formulate actionable strategies. \
                         As a decision agent, your primary intention is to {self.intention}. \
-                        Provide a clear <action> recommendation for the next {self.action_period}. \
+                        Provide a clear <action> recommendation for the next action period. \
                         State your <confidence> in the recommendation, considering prediction inaccuracy and uncertainty. \
                         Explain the <reason> behind your decision into rules, detailing how various factors and data points influenced the recommendation."
             ),
             HumanMessagePromptTemplate.from_template("Based on the prediction {prediction_output} in next {prediction_period} days, \
                                                      provide your recommended <action>, <confidence>, <reason> for the next {action_period},\
-                                                     in no more than {token_limit} tokens.")
+                                                     in no more than {token_limit} tokens.\
+                                                     Use blank space instead of comma after label <>.")
         ])
     
     def run(self, prediction_output, prediction_period, action_period, token_limit):
-        decision = self.chat(self.chat_prompt.format_prompt(
+        decision = self.chat(self.template.format_prompt(
             prediction_output=prediction_output, prediction_period=str(prediction_period), action_period=str(action_period), token_limit=token_limit
         ).to_messages())
         return decision.content
