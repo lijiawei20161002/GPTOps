@@ -1,4 +1,7 @@
 # GPTOps: A Cooperative AI Agent Framework for Next-Generation Infrastructure Operations
-GPTOps introduces a novel framework that leverages the power of Large Language Models (LLMs) for comprehensive infrastructure management. 
-By breaking down complex operational tasks into manageable subtasks, GPTOps employs a cooperative agent-based approach, combining the strengths of traditional machine learning models with the versatility of LLMs. 
-This framework aims to enhance the efficiency, reliability, and decision-making process in infrastructure operations, spanning across diverse domains such as cloud computing, smart city management, and system failure prediction.
+
+## Agents in GPTOps
+### Summary Agent: Analyzes and condenses large volumes of data into actionable insights.
+### Prediction Agent: Forecasts future trends, workload demands, or potential system failures based on summarized data.
+### Decision Agent: Makes strategic decisions based on predictions, optimizing for cost, performance, and reliability.
+### Reflection Agent: Evaluates the outcomes of decisions against actual results, suggesting adjustments to improve future predictions and decisions.
