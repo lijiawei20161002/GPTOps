@@ -26,7 +26,9 @@ class VMPriceMonitoringSystem:
             2 hours on a 8xlarge instance, 1 hour on a 16xlarge instance) with the lowest costs. "
         self.summary_agent = SummaryAgent(openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
         self.prediction_agent = PredictionAgent(openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
-        self.decision_agent = DecisionAgent(intention=self.intention, openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
+        self.decision_agent1 = DecisionAgent(intention="Be bold: "+self.intention, openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
+        self.decision_agent2 = DecisionAgent(intention="Be conservative: "+self.intention, openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
+        self.decision_agent3 = DecisionAgent(intention="Consider different agent suggestions to get the best decision", openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
         self.reflection_agent = ReflectionAgent(openai_api_key=os.getenv('OPENAI_API_KEY'), openai_organization=os.getenv('OPENAI_ORGANIZATION'))
     
     def parse_agent_output(self, output):
@@ -45,7 +47,7 @@ class VMPriceMonitoringSystem:
 
         return parsed_output
     
-    def log_formatted_message(self, start, end, summary, prediction, decision):
+    def log_formatted_message(self, start, end, summary, prediction):
         log_message = "\n\n"  
         if 'history' in summary:
             log_message += f"Summary for data from {start} to {end}:\n<current> {summary['current']}\n<history> {summary['history']}\n"
@@ -53,8 +55,8 @@ class VMPriceMonitoringSystem:
         if 'prediction' in prediction and 'confidence' in prediction:
             log_message += f"Prediction for the next {str(self.latest_period)} days:\n<prediction>: {prediction['prediction']}\n<confidence>: {prediction['confidence']}\n"
             log_message += "--------------------------------------------------\n"
-        if 'action' in decision and 'confidence' in decision and 'reason' in decision:
-            log_message += f"Decision based on prediction:\n<Action>: {decision['action']}\n<Confidence>: {decision['confidence']}\n<Reason>: {decision['reason']}\n"
+        #if 'action' in decision and 'confidence' in decision and 'reason' in decision:
+            #log_message += f"Decision based on prediction:\n<Action>: {decision['action']}\n<Confidence>: {decision['confidence']}\n<Reason>: {decision['reason']}\n"
         logging.info(log_message)
     
     def run_cycle(self):
@@ -83,13 +85,19 @@ class VMPriceMonitoringSystem:
             try:
                 summary = self.summary_agent.run(rawdata=rawdata, start=start, end=end, history=self.history, token_limit=self.token_limit, latest_period=self.latest_period)
                 prediction = self.prediction_agent.run(summary=summary, start=start, end=end, prediction_period=self.latest_period, token_limit=self.token_limit, latest_period=self.latest_period, examples=example)
-                decision = self.decision_agent.run(prediction_output=prediction, prediction_period=self.latest_period, action_period=self.latest_period, token_limit=self.token_limit)
+                decision1 = self.decision_agent1.run_single_decision(prediction_output=prediction, prediction_period=self.latest_period, action_period=self.latest_period, token_limit=self.token_limit)
+                decision2 = self.decision_agent2.run_single_decision(prediction_output=prediction, prediction_period=self.latest_period, action_period=self.latest_period, token_limit=self.token_limit)
+                decision = self.decision_agent3.run_judge(suggestion1=decision1, suggestion2=decision2, action_period=self.latest_period, token_limit=self.token_limit)
                 actuals = fulldata.iloc[end:min(end+self.latest_period, len(fulldata))]
                 initial_code = self.reflection_agent.interpret_prediction_algorithm(summary, prediction, self.token_limit)
-                print(initial_code)
                 adjusted_code = self.reflection_agent.adjust_prediction_algorithm(summary, initial_code, str(actuals), self.token_limit)
-                print(adjusted_code)
-                self.log_formatted_message(str(start), str(end), self.parse_agent_output(summary), self.parse_agent_output(prediction), self.parse_agent_output(decision))
+                self.log_formatted_message(str(start), str(end), self.parse_agent_output(summary), self.parse_agent_output(prediction))
+                logging.info("\n\nDecision Agent1:\n")
+                logging.info(self.parse_agent_output(decision1))
+                logging.info("\n\nDecision Agent2:\n")
+                logging.info(self.parse_agent_output(decision2))
+                logging.info("\n\nFinal Decision:\n")
+                logging.info(self.parse_agent_output(decision))
                 logging.info("\n\nInitial Prediction Algorithm:\n"+initial_code+"\nAdjusted Prediction Algorithm:\n"+adjusted_code)
 
             except Exception as e:
